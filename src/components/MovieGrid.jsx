@@ -20,7 +20,7 @@ function MovieGrid({ results }) {
                 release_date,
                 overview },index) => (
                 <div
-                    className="bg-gray-600 p-2 rounded-lg movie-item"
+                    className="bg-gray-600 p-2 rounded-lg movie-item transform hover:scale-105 transition-transform duration-300 ease-in-out"
                     key={id}>
                     <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={original_title} />
                     <div className='font-bold text-white mt-2'>{original_title}</div>
@@ -28,7 +28,7 @@ function MovieGrid({ results }) {
                     <div className='text-gray-400  h-6 overflow-ellipsis overflow-clip'>
                         {overview}
                     </div>
-                    <button className="bg-green-400 p-2 rounded-lg text-center mt-2 w-full font-bold" onClick={() => showDetails(index)}>
+                    <button className="bg-green-400 hover:bg-green-700 p-2 rounded-lg text-center mt-2 w-full font-bold" onClick={() => showDetails(index)}>
                         Details
                     </button>
 
