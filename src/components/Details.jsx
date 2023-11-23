@@ -1,5 +1,5 @@
 function Details({ setOpenModal, movie }) {
-
+    
     return (
         <>
             <div className='bg-black/80 w-[100vw] z-10 h-[100vh]  fixed top-0 left-0' 
@@ -13,7 +13,7 @@ function Details({ setOpenModal, movie }) {
                         </div>
                         <div className="flex gap-4 mt-4">
                             <div>
-                                <div > {movie.original_language} </div>
+                                <div > {movie.original_language.toUpperCase()} </div>
                                 <div > {movie.origin_country} </div>
                                 <div className='text-white/40 w-[300px]'> {movie.overview} </div>
                             </div>

@@ -10,7 +10,6 @@ function MovieGrid({ results }) {
         setIsOpen(true)
     }
 
-
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             
@@ -22,7 +21,9 @@ function MovieGrid({ results }) {
                 <div
                     className="bg-gray-600 p-2 rounded-lg movie-item transform hover:scale-105 transition-transform duration-300 ease-in-out"
                     key={id}>
-                    <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={original_title} />
+                    <img src={'https://image.tmdb.org/t/p/w500' + poster_path} 
+                    alt={original_title}
+                    className="w-full"/>
                     <div className='font-bold text-white mt-2'>{original_title}</div>
                     <div className='text-gray-400  '>{release_date}</div>
                     <div className='text-gray-400  h-6 overflow-ellipsis overflow-clip'>
@@ -39,7 +40,7 @@ function MovieGrid({ results }) {
                 <div>No result found</div>
             
             </>}
-            {isOpen && <Details setOpenModal={setIsOpen} movie={movie.current}/>}
+            {isOpen && <Details setOpenModal={setIsOpen} movie={movie}/>}
         </div>
 
     );
