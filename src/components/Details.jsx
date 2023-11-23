@@ -2,11 +2,11 @@ function Details({ setOpenModal, movie }) {
     
     return (
         <>
-            <div className='bg-black/80 w-[100vw] z-10 h-[100vh]  fixed top-0 left-0' 
+            <div className='bg-black/80 w-[300vw] z-10 h-[100vh] fixed top-0 left-0' 
             onClick={() => setOpenModal(false)} />
             <div><img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt={movie.original_title} /></div>
             <div className='absolute w-full flex justify-center items-center z-30 '>
-                <div className=" bg-black/80  p-6 rounded-lg md:w-[50%] lg:w-[40%]">
+                <div className=" bg-black/80 p-6 rounded-lg md:w-[50%] lg:w-[40%]">
                     <div >
                         <div className='text-white font-bold text-3xl'>
                             {movie.original_title}

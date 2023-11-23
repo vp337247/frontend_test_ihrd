@@ -6,7 +6,7 @@ function Search({ searchTerm }) {
 
     const REACT_APP_API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 
-    const [result, setResults] = useState([]);
+    const [results, setResults] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const fetchResults = (term) => {
 
@@ -25,7 +25,7 @@ function Search({ searchTerm }) {
    
     useEffect(() => {
         fetchResults(searchTerm)
-    }, []);
+    }, [searchTerm]);
 
     return (<section>
         {loaded ? <MovieGrid results={results}/>
