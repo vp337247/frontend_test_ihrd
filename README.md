@@ -3,7 +3,7 @@ The Movie Database is a web application that allows users to explore information
 
 Environment variables
 
-PORT=3001
+PORT=3001 ,
 VITE_REACT_APP_API_KEY="YOUR_KEY"
 
 To start 
