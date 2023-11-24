@@ -6,7 +6,8 @@ function App() {
     <div className='w-full flex justify-center'>
       <div className='max-w-[1100px] '>
         <div className='text-4xl  text-center py-3'> The Movie Database </div>
-        <Home term={''} /> {/* Pass term as a prop */}
+        {/* Pass term as a prop */}
+        <Home term={''} />
       </div>
     </div>
   );

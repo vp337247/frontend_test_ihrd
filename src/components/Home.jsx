@@ -14,6 +14,7 @@ class Home extends Component {
     render() {
         return (
             <div className="relative w-full">
+                {/* Search input */}
                 <div className="search-input bg-white-500 w-full">
                     <input
                         type="text"
@@ -23,9 +24,10 @@ class Home extends Component {
                         placeholder="Start typing to show results..."
                     />
                 </div>
-                {this.state.searchTerm.length === 0 ? <Popular {...this.props} /> 
-                : 
-                <Search searchTerm={this.state.searchTerm} />}
+                {/* Display popular movies or search results based on the search term */}
+                {this.state.searchTerm.length === 0 ? <Popular {...this.props} />
+                    :
+                    <Search searchTerm={this.state.searchTerm} />}
             </div>
         );
     }

@@ -10,7 +10,7 @@ function MovieGrid({ results }) {
     setIsOpen(true);
   };
 
-  
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
       {results.length > 0 ? (
@@ -30,6 +30,7 @@ function MovieGrid({ results }) {
               <div className="text-gray-400  h-6 overflow-ellipsis overflow-clip">
                 {overview}
               </div>
+              {/* Details button */}
               <button
                 className="bg-green-400 hover:bg-green-700 p-2 rounded-lg text-center mt-2 w-full font-bold"
                 onClick={() => showDetails(index)}
@@ -44,6 +45,7 @@ function MovieGrid({ results }) {
           <div>No result found</div>
         </>
       )}
+      {/* Display Details component when isOpen is true */}
       {isOpen && <Details setOpenModal={setIsOpen} movie={movie} />}
     </div>
   );

@@ -10,7 +10,7 @@ function Popular() {
     const [loaded, setLoaded] = useState(false);
     const fetchPopular = () => {
 
-        
+
 
         fetch(
             `https://api.themoviedb.org/3/movie/popular?api_key=${REACT_APP_API_KEY}&language=en-US&page=1`
